@@ -1,8 +1,10 @@
-# dictionaryApp
+React app using the Free Dictionary api 
+
+
 This application is made up of two parts, one with the client input and the other is displaying results. 
 
- - At whatever point a client looks for a word, we store that contribution to a state and trigger an API call dependent on the looked through watchword boundary. 
- - After that when the API call is made, store that API reaction in another state variable.
+ - When inputting a word in the search , it is  stored to a state and triggers an API call to the "https://api.dictionaryapi.dev/api/" dependent on the looked through watchword boundary. 
+ - After that the API call is made, the word is stored and the  API reaction in another state variable.
 
 React and packages Install instructions:
 1: Create a react application:
