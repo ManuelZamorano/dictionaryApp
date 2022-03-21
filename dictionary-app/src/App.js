@@ -15,45 +15,31 @@ function getMeaning() {
 	setData(response.data[0]);
 	});
 }
-// Function to searched word
-function searchDict() {
-	
-}
+// 
 return (
 	<div className="App">
 	<h1>Lookup in Dictionary</h1>
 	<div className="searchBox">
 		
-		<input
-		type="text"
-		placeholder="Search..."
-		onChange={(e) => {
-			setSearchWord(e.target.value);
-		}}
-		/>
-		<button
-		onClick={() => {
-      // Calls API to get results
+		<input type="text" placeholder="Search..." onChange={(e) => {	setSearchWord(e.target.value);}}/>
+		{/* // Calls API */}
+    <button	onClick={() => {
 			getMeaning();
 		}}
-		>
-		<FaSearch size="20px" />
-		</button>
+		><FaSearch size="20px" /></button>
 	</div>
+  {/* // Returns results */}
 	{data && (
 		<div className="showResults">
 	
 		<h4>Parts of speech:</h4>
-		
-<p>{data.meanings[0].partOfSpeech}</p>
+		<p>{data.meanings[0].partOfSpeech}</p>
 
 		<h4>Definition:</h4>
-		
-<p>{data.meanings[0].definitions[0].definition}</p>
+		<p>{data.meanings[0].definitions[0].definition}</p>
 
 		<h4>Example:</h4>
-		
-<p>{data.meanings[0].definitions[0].example}</p>
+		<p>{data.meanings[0].definitions[0].example}</p>
 		</div>
 	)}
 	</div>
